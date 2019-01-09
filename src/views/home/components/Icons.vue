@@ -1,19 +1,17 @@
 <template>
   <div class="icons">
-    <Carousel v-model="value2" loop dots="none">
-      <div>
-        <CarouselItem v-for="(page,index) in pages" :key="index">
-          <div class="demo-carousel">
-            <div class="icon" v-for="item in page" :key="item.id">
-              <div class="icon-img">
-                <img class="icon-img-content" :src="item.imgUrl" alt>
-              </div>
-
-              <p class="icon-desc">{{item.desc}}</p>
-            </div>
+    <!-- arrow="never" -->
+    <Carousel v-model="value2" loop  :radius-dot="true">
+      <CarouselItem v-for="(page,index) in pages" :key="index">
+      <div class="demo-carousel">
+        <div class="icon" v-for="item in page" :key="item.id">
+          <div class="icon-img">
+            <img class="icon-img-content" :src="item.imgUrl" alt>
           </div>
-        </CarouselItem>
+          <p class="icon-desc">{{item.desc}}</p>
+        </div>
       </div>
+      </CarouselItem>
       <!-- <CarouselItem>
         <div class="demo-carousel">2</div>
       </CarouselItem>
@@ -121,6 +119,42 @@ export default {
           imgUrl:
             "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
           desc: "景点门票"
+        },
+         {
+          id: "0004",
+          imgUrl:
+            "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+          desc: "景点门票"
+        },
+         {
+          id: "0005",
+          imgUrl:
+            "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+          desc: "景点门票"
+        },
+         {
+          id: "0006",
+          imgUrl:
+            "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+          desc: "景点门票"
+        },
+         {
+          id: "0007",
+          imgUrl:
+            "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+          desc: "景点门票"
+        },
+         {
+          id: "0008",
+          imgUrl:
+            "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+          desc: "景点门票"
+        },
+         {
+          id: "0009",
+          imgUrl:
+            "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+          desc: "景点门票"
         }
       ]
     };
@@ -134,8 +168,8 @@ export default {
           pages[page] = [];
         }
         pages[page].push(iterm);
-      });
-      console.log(pages);
+      })
+      return pages;
     }
   }
 };
@@ -146,7 +180,7 @@ export default {
   overflow: hidden;
   height: 0;
   padding-bottom: 50%;
-  //   bottom: green;
+    // bottom: green;
   .icon {
     position: relative;
     overflow: hidden;
@@ -161,7 +195,7 @@ export default {
       left: 0;
       right: 0;
       bottom: 0.44rem;
-      //   background-color: blue;
+        // background-color: blue;
       box-sizing: border-box;
       padding: 0.2rem;
       .icon-img-content {
