@@ -1,8 +1,4 @@
 <template>
-<<<<<<< HEAD
-  <h1>icon 测试</h1>
-</template>
-=======
   <div class="icons swiper">
     <!-- arrow="never" dots="outside" -->
     <!-- iviwe实现的 -->
