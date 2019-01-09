@@ -42,18 +42,20 @@ export default {
     return {
       value1: 0
     };
-  }
+  },
+  name: "HomeSwiper"
 };
 </script>
 <style lang="less" scoped>
-// >>>样式穿透
-// .swiper  .ivu-carousel-dots li button {
-//   background-color: #fff !important;
-// }
+.swiper /deep/ .ivu-carousel-dots li button {
+  background-color: #fff !important;
+}
 .swiper {
+  overflow: hidden;
   width: 100%;
   height: 0;
   padding-bottom: 31.25%;
+  background-color: #eee;
   img {
     width: 100%;
     height: 100%;

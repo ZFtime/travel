@@ -12,7 +12,9 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+    name:'HomeHeader'
+};
 </script>
 <style lang="less" scoped>
 //~@代表根目录src
