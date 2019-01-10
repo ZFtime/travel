@@ -78,6 +78,16 @@ textarea {
     line-height: 20px;
 }
 
+input,
+button,
+select,
+textarea {
+    border: 0px;
+    outline: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
 h1 {
     font-size: 24px;
 }
@@ -93,8 +103,8 @@ h3 {
 button {
     margin: 0;
     padding: 0;
-    border: 1px solid transparent; 
-    outline: none; 
+    border: 1px solid transparent;
+    outline: none;
 }
 
 @media only screen and (min-width:360px) {
@@ -150,7 +160,7 @@ textarea {
 }
 
 /*取消按钮在inphone上的默认样式*/
-input[type=button] {
+/* input[type=button] {
     -webkit-appearance: none;
     outline: none
 }
@@ -161,7 +171,7 @@ input::-webkit-input-placeholder {
 
 textarea::-webkit-input-placeholder {
     color: #F0F0F0;
-}
+} */
 
 input::-webkit-input-speech-button {
     display: none
