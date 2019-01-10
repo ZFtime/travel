@@ -6,14 +6,19 @@
     <div class="header-input">
       <Icon type="ios-search"/>输入城市/景点/游玩主题
     </div>
-    <div class="header-right">三亚
+    <div class="header-right">
+      {{this.city}}
       <Icon type="md-arrow-dropdown" class="right-dropdown"/>
     </div>
   </div>
 </template>
 <script>
 export default {
-    name:'HomeHeader'
+    name:'HomeHeader',
+    // 父子传值之props   等下要引用父组件的数据
+    props:{
+      city:String
+    }
 };
 </script>
 <style lang="less" scoped>

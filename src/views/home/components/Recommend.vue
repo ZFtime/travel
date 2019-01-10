@@ -20,33 +20,36 @@ export default {
   name: "HomeRecommend",
   data() {
     return {
-      recommendList: [
-        {
-          id: "0001",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1712/95/95f38f28a6ff19cba3.img.jpg_200x200_af967e35.jpg",
-          itemTitle: "水奥雪世界",
-          itemDesc: "北京市顺义区奥林匹克水上公园",
-          itemButton: "查看详情"
-        },
-        {
-          id: "0002",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg",
-          itemTitle: "故宫",
-          itemDesc: "北京市东城区景山前街4号",
-          itemButton: "查看详情"
-        },
-        {
-          id: "0003",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1511/d2/d2aec2dfc5aa771290.water.jpg_200x200_69e4a80d.jpg",
-          itemTitle: "南山滑雪场",
-          itemDesc: "北京市密云县河南寨镇圣水头村",
-          itemButton: "查看详情"
-        }
-      ]
+      // recommendList: [
+      //   {
+      //     id: "0001",
+      //     imgUrl:
+      //       "http://img1.qunarzz.com/sight/p0/1712/95/95f38f28a6ff19cba3.img.jpg_200x200_af967e35.jpg",
+      //     itemTitle: "水奥雪世界",
+      //     itemDesc: "北京市顺义区奥林匹克水上公园",
+      //     itemButton: "查看详情"
+      //   },
+      //   {
+      //     id: "0002",
+      //     imgUrl:
+      //       "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg",
+      //     itemTitle: "故宫",
+      //     itemDesc: "北京市东城区景山前街4号",
+      //     itemButton: "查看详情"
+      //   },
+      //   {
+      //     id: "0003",
+      //     imgUrl:
+      //       "http://img1.qunarzz.com/sight/p0/1511/d2/d2aec2dfc5aa771290.water.jpg_200x200_69e4a80d.jpg",
+      //     itemTitle: "南山滑雪场",
+      //     itemDesc: "北京市密云县河南寨镇圣水头村",
+      //     itemButton: "查看详情"
+      //   }
+      // ]
     };
+  },
+  props:{
+    recommendList:Array
   }
 };
 </script>
