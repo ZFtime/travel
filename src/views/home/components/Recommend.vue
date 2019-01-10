@@ -54,7 +54,7 @@ export default {
 .recommend {
   background-color: #fff;
   .title {
-    margin-top: 0.2rem;
+    // margin-top: 0.2rem;
     line-height: 0.8rem;
     background: #eee;
     text-indent: 0.2rem;

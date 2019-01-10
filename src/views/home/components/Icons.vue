@@ -127,6 +127,7 @@ export default {
   overflow: hidden;
   height: 0;
   padding-bottom: 55%;
+  background-color: #fff;
   // bottom: green;
   .icon {
     position: relative;
