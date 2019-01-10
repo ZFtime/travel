@@ -6,19 +6,21 @@
     <div class="header-input">
       <Icon type="ios-search"/>输入城市/景点/游玩主题
     </div>
-    <div class="header-right">
-      {{this.city}}
-      <Icon type="md-arrow-dropdown" class="right-dropdown"/>
-    </div>
+    <router-link to="/city">
+      <div class="header-right">
+        {{this.city}}
+        <Icon type="md-arrow-dropdown" class="right-dropdown"/>
+      </div>
+    </router-link>
   </div>
 </template>
 <script>
 export default {
-    name:'HomeHeader',
-    // 父子传值之props   等下要引用父组件的数据
-    props:{
-      city:String
-    }
+  name: "HomeHeader",
+  // 父子传值之props   等下要引用父组件的数据
+  props: {
+    city: String
+  }
 };
 </script>
 <style lang="less" scoped>
@@ -27,8 +29,8 @@ export default {
 
 .header {
   display: flex;
-  height: 0.86rem;
-  line-height: 0.86rem;
+  height: @headerHeight;
+  line-height: @headerHeight;
   background-color: @bgColor;
   color: #fff;
   .header-left {
@@ -54,6 +56,7 @@ export default {
     width: 1.24rem;
     float: right;
     text-align: center;
+    color:#fff;
     .right-dropdown {
       font-size: 0.44rem;
       margin-left: -0.04rem;
