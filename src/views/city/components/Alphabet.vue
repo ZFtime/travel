@@ -1,25 +1,17 @@
 <template>
   <div class="list" ref="wrapper">
     <ul>
-      <li class="item">A</li>
-      <li class="item">A</li>
-      <li class="item">A</li>
-      <li class="item">A</li>
-      <li class="item">A</li>
-      <li class="item">A</li>
-      <li class="item">A</li>
-      <li class="item">A</li>
-      <li class="item">A</li>
-      <li class="item">A</li>
-      <li class="item">A</li>
-      <li class="item">A</li>
+      <li class="item" v-for="(item,key) in cities" :key="item.id">{{key}}</li>
     </ul>
   </div>
 </template>
 <script>
 // import Bscroll from "better-scroll";
 export default {
-  name: "Alphabet"
+  name: "Alphabet",
+  props: {
+    cities: Object
+  }
 };
 </script>
 <style lang="less" scoped>
@@ -34,9 +26,9 @@ export default {
   bottom: 0;
   width: 0.4rem;
   .item {
-      line-height: .44rem;
+    line-height: 0.44rem;
     text-align: center;
-    color:@bgColor;
+    color: @bgColor;
   }
 }
 </style>
