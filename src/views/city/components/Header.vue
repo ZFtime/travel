@@ -18,8 +18,8 @@ export default {
   position: relative;
   text-align: center;
   overflow: hidden;
-  height:@headerHeight;
-  line-height:@headerHeight;
+  height:.75rem;
+  line-height:.74rem;
   color: #fff;
   background-color: @bgColor;
   font-size: 0.32rem;

@@ -47,7 +47,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  border: 1px solid #eaeaea;
+  border: 1px solid #666;
   transform-origin: 0 0;
 }
 
@@ -81,7 +81,7 @@
 .border-topbottom::before,
 .border-topleft::before,
 .border-topright::before {
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid #ccc;
   transform-origin: 0 0;
 }
 
@@ -97,7 +97,7 @@
 .border-topbottom::after,
 .border-rightbottom::after,
 .border-bottomleft::before {
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 1px solid #666;
   transform-origin: 0 100%;
 }
 
