@@ -2,8 +2,9 @@
   <div class="city">
     <CityHeader/>
     <CitySearch/>
-    <CityList :hotCities="hotCities" :cities="cities"/>
-    <Alphabet :cities="cities"/>
+    <CityList :hotCities="hotCities" 
+    :cities="cities" :letter="letter"/>
+    <Alphabet :cities="cities" @change="handLeterChange"/>
   </div>
 </template>
 <script>
@@ -23,7 +24,8 @@ export default {
   data() {
     return {
       hotCities: [],
-      cities:{}
+      cities:{},
+      letter:""
     };
   },
   mounted() {
@@ -42,7 +44,12 @@ export default {
         .catch(function(error) {
           console.log(error);
         });
+    },
+    handLeterChange(letter){
+      this.letter=letter;
+      // console.log(letter);
     }
+
   }
 };
 </script>

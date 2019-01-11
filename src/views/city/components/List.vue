@@ -26,12 +26,16 @@
           </div>-->
         </div>
       </div>
-      <div class="area border-topbottom" v-for="(item,key) in cities" :key="item.id">
+      <div class="area border-topbottom" 
+      v-for="(item,key) in cities" 
+      :key="key"
+      :ref="key">
         <div class="title">{{key}}</div>
-        <div class="item-list" v-for="innerItem in item" :key="innerItem.id">
+        <div class="item-list" 
+        v-for="innerItem in item" :key="innerItem.id">
           <div class="item border-topbottom">{{innerItem.name}}</div>
           <!-- <div class="item border-topbottom">阿拉尔</div>
-          <div class="item border-topbottom">阿拉尔</div> -->
+          <div class="item border-topbottom">阿拉尔</div>-->
         </div>
         <!-- <div class="title">A</div>
         <div class="item-list">
@@ -70,7 +74,17 @@ export default {
   },
   props: {
     hotCities: Array,
-    cities:Object
+    cities: Object,
+    letter: String
+  },
+  watch: {
+    letter() {
+        // console.log(this.letter
+        if(this.letter){
+            const element=this.$refs[this.letter][0]
+            this.scroll.scrollToElement(element)
+        }
+    }
   }
 };
 </script>
