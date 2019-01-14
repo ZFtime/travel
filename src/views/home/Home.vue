@@ -18,6 +18,8 @@ import HomeIcons from "./components/Icons";
 import HomeRecommend from "./components/Recommend";
 import HomeWeekend from "./components/Weekend";
 import axios from "axios";
+// 优化页面的性能
+import { mapState } from "vuex";
 
 export default {
   name: "home",
@@ -30,26 +32,30 @@ export default {
   },
   data() {
     return {
-      //    原来的写法 
+      //    原来的写法
       // city: "",
-      SwiperList:[],
-      iconList:[],
-      recommendList:[],
-      WeekendList:[]
+      SwiperList: [],
+      iconList: [],
+      recommendList: [],
+      WeekendList: [],
+      lastCity:""
     };
+  },
+  computed: {
+    ...mapState(["city"])
   },
   methods: {
     getHomeInfo() {
       axios
-        .get("http://localhost:9090/msg")
+        .get("http://localhost:9090/msg?city=" + this.city)
         .then(res => {
-          const data=res.data.data
-          //    原来的写法 
+          const data = res.data.data;
+          //    原来的写法
           // this.city = res.data.city;
           this.SwiperList = data.SwiperList;
-          this.iconList=data.iconList;
-          this.recommendList=data.recommendList;
-          this.WeekendList=data.WeekendList
+          this.iconList = data.iconList;
+          this.recommendList = data.recommendList;
+          this.WeekendList = data.WeekendList;
           // console.log(data);
         })
         .catch(function(error) {
@@ -59,6 +65,13 @@ export default {
   },
   mounted() {
     this.getHomeInfo();
+  },
+// keep-alive自带的方法
+  activated(){
+    if(this.lastCity!==this.city){
+      this.lastCity=this.city
+      this.getHomeInfo()
+    }
   }
 };
 </script>
