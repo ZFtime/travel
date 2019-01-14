@@ -8,6 +8,7 @@
     </div>
     <router-link to="/city">
       <div class="header-right">
+        <!-- {{this.city}} -->
         {{this.city}}
         <Icon type="md-arrow-dropdown" class="right-dropdown"/>
       </div>
@@ -15,12 +16,18 @@
   </div>
 </template>
 <script>
+import {mapState, mapGetters}  from "vuex"
 export default {
   name: "HomeHeader",
-  // 父子传值之props   等下要引用父组件的数据
-  props: {
-    city: String
+  computed:{
+    ...mapState(['city']),
+    // 使用mapGetters
+    // ...mapGetters(['doubleCity'])
   }
+  // 父子传值之props   等下要引用父组件的数据
+  // props: {
+  //   city: String
+  // }
 };
 </script>
 <style lang="less" scoped>
@@ -53,7 +60,8 @@ export default {
     color: #ccc;
   }
   .header-right {
-    width: 1.24rem;
+    min-width: 1.24rem;
+    padding: .1rem;
     float: right;
     text-align: center;
     color:#fff;

@@ -1,13 +1,9 @@
 <template>
   <div class="search">
     <input v-model="keyword" class="search-input" type="text" placeholder="输入城市名或拼音">
-    <div class="search-content" ref="search"  v-show="keyword">
+    <div class="search-content" ref="search" v-show="keyword">
       <ul>
-        <li
-          class="search-item border-bottom"
-          v-for="item in list"
-          :key="item.id"
-        >{{item.name}}</li>
+        <li class="search-item border-bottom" @click="handleCityClick(item.name)" v-for="item in list" :key="item.id">{{item.name}}</li>
         <li class="search-item border-bottom" v-show="hasNodata">暂无匹配项</li>
       </ul>
     </div>
@@ -15,6 +11,7 @@
 </template>
 <script>
 import Bscroll from "better-scroll";
+import { mapMutations } from "vuex"
 export default {
   name: "CitySearch",
   props: {
@@ -22,8 +19,17 @@ export default {
   },
   computed: {
     hasNodata() {
-        return !this.list.length
+      return !this.list.length;
     }
+  },
+  methods: {
+    handleCityClick(city) {
+      // this.$store.dispatch('changeCity',city)
+      // this.$store.commit("changeCity", city);
+      this.changeCity(city)
+      this.$router.push("/");
+    },
+    ...mapMutations(['changeCity'])
   },
   mounted() {
     this.scroll = new Bscroll(this.$refs.search);
@@ -41,8 +47,8 @@ export default {
         clearTimeout(this.timer);
       }
       if (!this.keyword) {
-        this.list = []
-        return
+        this.list = [];
+        return;
       }
       this.timer = setTimeout(() => {
         const result = [];

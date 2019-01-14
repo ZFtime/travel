@@ -1,6 +1,9 @@
 <template>
   <div class="home">
-    <HomeHeader :city="city"/>
+    <!-- 原来的写法 -->
+    <!-- <HomeHeader :city="city"/> -->
+    <!-- 使用vuex的写法 -->
+    <HomeHeader/>
     <HomeSwiper :SwiperList="SwiperList"/>
     <HomeIcons :iconList="iconList"/>
     <HomeRecommend :recommendList="recommendList"/>
@@ -27,7 +30,8 @@ export default {
   },
   data() {
     return {
-      city: "",
+      //    原来的写法 
+      // city: "",
       SwiperList:[],
       iconList:[],
       recommendList:[],
@@ -40,12 +44,13 @@ export default {
         .get("http://localhost:9090/msg")
         .then(res => {
           const data=res.data.data
-          this.city = res.data.city;
+          //    原来的写法 
+          // this.city = res.data.city;
           this.SwiperList = data.SwiperList;
           this.iconList=data.iconList;
           this.recommendList=data.recommendList;
           this.WeekendList=data.WeekendList
-          console.log(data);
+          // console.log(data);
         })
         .catch(function(error) {
           console.log(error);
