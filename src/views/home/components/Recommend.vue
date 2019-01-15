@@ -2,7 +2,14 @@
   <div class="recommend">
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item in recommendList" :key="item.id">
+      <!-- tag="li"的意思是router-link直接渲染li标签  -->
+      <router-link
+        tag="li"
+        class="item border-bottom"
+        v-for="item in recommendList"
+        :key="item.id"
+        :to="'/detail/'+item.id"
+      >
         <div class="item-img-wrapper">
           <img class="item-img" :src="item.imgUrl" :alt="item.itemTitle">
         </div>
@@ -11,7 +18,7 @@
           <p class="item-desc">{{item.itemDesc}}</p>
           <button class="item-button">{{item.itemButton}}</button>
         </div>
-      </li>
+      </router-link>
     </ul>
   </div>
 </template>
@@ -48,8 +55,8 @@ export default {
       // ]
     };
   },
-  props:{
-    recommendList:Array
+  props: {
+    recommendList: Array
   }
 };
 </script>

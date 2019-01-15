@@ -441,14 +441,7 @@ a:focus,
 /*flex*/
 /*容器*/
 .wrapper {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 5px 5px 60px 5px;
     overflow: auto;
-    margin-top: 44px;
     -webkit-overflow-scrolling: touch;
 }
 

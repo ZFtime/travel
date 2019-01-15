@@ -38,7 +38,7 @@ export default {
       iconList: [],
       recommendList: [],
       WeekendList: [],
-      lastCity:""
+      lastCity: ""
     };
   },
   computed: {
@@ -66,11 +66,11 @@ export default {
   mounted() {
     this.getHomeInfo();
   },
-// keep-alive自带的方法
-  activated(){
-    if(this.lastCity!==this.city){
-      this.lastCity=this.city
-      this.getHomeInfo()
+  // keep-alive自带的方法
+  activated() {
+    if (this.lastCity !== this.city) {
+      this.lastCity = this.city;
+      this.getHomeInfo();
     }
   }
 };
