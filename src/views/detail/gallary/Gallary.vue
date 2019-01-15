@@ -4,10 +4,7 @@
       <swiper :options="swiperOption">
         <swiper-slide v-for="(item,index) in imgs" :key="index">
           <div>
-            <img
-              class="gallary-image"
-              :src="item"
-            >
+            <img class="gallary-image" :src="item">
           </div>
         </swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
@@ -18,28 +15,26 @@
 <script>
 export default {
   name: "CommonGallary",
-  props:{
-    imgs:{
-      type:Array,
-      default(){
-        return [
-          
-        ]
+  props: {
+    imgs: {
+      type: Array,
+      default() {
+        return [];
       }
     }
   },
   data() {
     return {
       swiperOption: {
-        pagination : '.swiper-pagination',
+        pagination: ".swiper-pagination",
         paginationType: "fraction",
-        observeParents:true,
-        observer:true
+        observeParents: true,
+        observer: true
       }
     };
   },
-  methods:{
-    closeGallary(){
+  methods: {
+    closeGallary() {
       this.$emit("close");
     }
   }
