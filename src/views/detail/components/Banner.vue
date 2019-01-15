@@ -3,16 +3,16 @@
     <div class="banner" @click="handleGallary">
       <img
         class="banner-img"
-        src="//img1.qunarzz.com/sight/p0/1812/38/387730697ee0c7aba3.img.jpg_600x330_1c99d3b7.jpg"
+        :src="bannerImg"
         alt
       >
       <div class="banner-info">
-        <div class="banner-title">2019首届三亚凤凰国际光影艺术节</div>
+        <div class="banner-title">{{this.sightName}}</div>
         <div class="banner-number">
           <span class="iconinfo banner-icon">
             <Icon type="md-photos"/>
           </span>
-          39
+          {{this.bannerImg.length}}
         </div>
       </div>
     </div>
@@ -30,6 +30,11 @@ export default {
           ],
            showGallary:false
       }
+  },
+  props:{
+    sightName:String,
+    bannerImg:String,
+    gallaryImgs:Array
   },
   components: {
     CommonGallary
