@@ -30,19 +30,22 @@ export default {
     getDataInfo() {
       // console.log(this.$router.currentRoute.params.id)
       axios
-        .get("http://localhost:9092/msg?id="
-        , {
+        .get("http://localhost:9092/msg?id=", {
           params: {
             id: this.$router.currentRoute.params.id
           }
-        }
-        )
+        })
         .then(res => {
           if (res.data.ret) {
-            this.list = res.data.data.categoryList;
-            this.sightName = res.data.data.sightName;
-            this.bannerImg = res.data.data.bannerImg;
-            this.gallaryImgs = res.data.data.gallaryImgs;
+            var obj = res.data.data;
+            for (let i in obj) {
+              if (this.$router.currentRoute.params.id == i) {
+                this.list = obj[i].categoryList;
+                this.sightName = obj[i].sightName;
+                this.bannerImg = obj[i].bannerImg;
+                this.gallaryImgs = obj[i].gallaryImgs;
+              }
+            }
           }
         })
         .catch(function(error) {

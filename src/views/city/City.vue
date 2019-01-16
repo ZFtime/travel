@@ -38,7 +38,6 @@ export default {
           const data = res.data.data;
           this.hotCities = data.hotCities;
           this.cities = data.cities;
-          console.log(data);
         })
         .catch(function(error) {
           console.log(error);
