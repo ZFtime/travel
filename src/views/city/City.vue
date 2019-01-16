@@ -2,8 +2,7 @@
   <div class="city">
     <CityHeader/>
     <CitySearch :cities="cities"/>
-    <CityList :hotCities="hotCities" 
-    :cities="cities" :letter="letter"/>
+    <CityList :hotCities="hotCities" :cities="cities" :letter="letter"/>
     <Alphabet :cities="cities" @change="handLeterChange"/>
   </div>
 </template>
@@ -24,8 +23,8 @@ export default {
   data() {
     return {
       hotCities: [],
-      cities:{},
-      letter:""
+      cities: {},
+      letter: ""
     };
   },
   mounted() {
@@ -38,18 +37,17 @@ export default {
         .then(res => {
           const data = res.data.data;
           this.hotCities = data.hotCities;
-          this.cities=data.cities
+          this.cities = data.cities;
           console.log(data);
         })
         .catch(function(error) {
           console.log(error);
         });
     },
-    handLeterChange(letter){
-      this.letter=letter;
+    handLeterChange(letter) {
+      this.letter = letter;
       // console.log(letter);
     }
-
   }
 };
 </script>

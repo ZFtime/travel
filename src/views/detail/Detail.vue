@@ -28,12 +28,15 @@ export default {
   },
   methods: {
     getDataInfo() {
+      // console.log(this.$router.currentRoute.params.id)
       axios
-        // .get("http://localhost:9092/msg", {
-        //   params: {
-        //     id: this.$router.params.id
-        //   }
-        .get("http://localhost:9092/msg")
+        .get("http://localhost:9092/msg?id="
+        , {
+          params: {
+            id: this.$router.currentRoute.params.id
+          }
+        }
+        )
         .then(res => {
           if (res.data.ret) {
             this.list = res.data.data.categoryList;

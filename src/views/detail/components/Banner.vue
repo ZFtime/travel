@@ -16,7 +16,7 @@
         </div>
       </div>
     </div>
-    <CommonGallary :imgs="imgs" v-show="showGallary" @close="handleGallaryClose"/>
+    <CommonGallary :imgs="gallaryImgs" v-show="showGallary" @close="handleGallaryClose"/>
   </div>
 </template>
 <script>
@@ -25,9 +25,7 @@ export default {
   name: "Banner",
   data(){
       return {
-          imgs:[
-              "http://img1.qunarzz.com/sight/p0/1812/38/387730697ee0c7aba3.img.jpg_r_800x800_948b8531.jpg","http://img1.qunarzz.com/sight/p0/1801/c1/c188eaa1ebc31e86a3.img.jpg_r_800x800_cbf0e936.jpg"
-          ],
+          // imgs:[],
            showGallary:false
       }
   },
