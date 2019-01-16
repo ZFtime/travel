@@ -1,5 +1,5 @@
 <template>
-  <div class="icons swiper">
+  <div class="icons swiper" @click="homeIcons">
     <!-- arrow="never" dots="outside" -->
     <!-- iviwe实现的 -->
     <!-- <Carousel v-model="value2" dots="outside"  :radius-dot="true">
@@ -117,6 +117,11 @@ export default {
         pages[page].push(iterm);
       });
       return pages;
+    }
+  },
+  methods:{
+    homeIcons(){
+      //点击不同的页面，根据不同的id跳转到不同的页面 
     }
   }
 };
