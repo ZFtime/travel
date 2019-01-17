@@ -3,6 +3,7 @@ import Router from "vue-router";
 import Home from "./views/home/Home.vue";
 import City from "./views/city/City.vue";
 import Detail from "./views/detail/Detail.vue";
+import Ticket  from "./views/iconList/ticket/ticket.vue"
 
 Vue.use(Router);
 
@@ -22,12 +23,12 @@ export default new Router({
       path: "/detail/:id",
       name: "Detail",
       component: Detail
+    },
+    {
+      path: "/list_景点门票",
+      name: "list_景点门票",
+      component: Ticket
     }
-    // {
-    //   path: "/list_0001",
-    //   name: "Detail",
-    //   component: Detail
-    // }
   ],
   scrollBehavior(to, from, savedPosition) {
     return {

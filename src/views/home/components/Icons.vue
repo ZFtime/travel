@@ -20,10 +20,9 @@
     <p class="icon-desc"></p>-->
     <!-- 适应手机端 -->
     <swiper :options="swiperOption">
-      <!-- <router-link :to="'/list_'+id"> -->
       <swiper-slide v-for="(page,index) in pages" :key="index">
         <div class="icon" v-for="item in page" :key="item.id">
-          <router-link :to="'/list_'+item.id">
+          <router-link :to="'/list_'+item.desc">
             <div class="icon-img">
               <img class="icon-img-content" :src="item.imgUrl" :alt="item.desc">
             </div>

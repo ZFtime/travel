@@ -54,7 +54,6 @@ export default {
           // this.city = res.data.city;
           this.SwiperList = data.SwiperList;
           this.iconList = data.iconList;
-          console.log(this.$router);
           this.recommendList = data.recommendList;
           this.WeekendList = data.WeekendList;
           // console.log(data);

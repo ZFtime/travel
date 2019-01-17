@@ -106,7 +106,9 @@ button {
     border: 1px solid transparent;
     outline: none;
 }
-
+em,i {
+    font-style: normal;
+}
 @media only screen and (min-width:360px) {
     h1 {
         font-size: 28px;
@@ -129,7 +131,11 @@ button {
         /* line-height: 26px; */
     }
 }
-
+input{
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+}
 h1,
 h2,
 h3,
