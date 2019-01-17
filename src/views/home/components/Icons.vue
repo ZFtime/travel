@@ -1,5 +1,5 @@
 <template>
-  <div class="icons swiper" @click="homeIcons">
+  <div class="icons swiper">
     <!-- arrow="never" dots="outside" -->
     <!-- iviwe实现的 -->
     <!-- <Carousel v-model="value2" dots="outside"  :radius-dot="true">
@@ -20,12 +20,15 @@
     <p class="icon-desc"></p>-->
     <!-- 适应手机端 -->
     <swiper :options="swiperOption">
+      <!-- <router-link :to="'/list_'+id"> -->
       <swiper-slide v-for="(page,index) in pages" :key="index">
         <div class="icon" v-for="item in page" :key="item.id">
-          <div class="icon-img">
-            <img class="icon-img-content" :src="item.imgUrl" :alt="item.desc">
-          </div>
-          <p class="icon-desc">{{item.desc}}</p>
+          <router-link :to="'/list_'+item.id">
+            <div class="icon-img">
+              <img class="icon-img-content" :src="item.imgUrl" :alt="item.desc">
+            </div>
+            <p class="icon-desc">{{item.desc}}</p>
+          </router-link>
         </div>
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
@@ -104,7 +107,7 @@ export default {
     };
   },
   props: {
-    iconList:Array
+    iconList: Array
   },
   computed: {
     pages() {
@@ -117,11 +120,6 @@ export default {
         pages[page].push(iterm);
       });
       return pages;
-    }
-  },
-  methods:{
-    homeIcons(){
-      //点击不同的页面，根据不同的id跳转到不同的页面 
     }
   }
 };
