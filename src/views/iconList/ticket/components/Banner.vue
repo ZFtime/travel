@@ -103,7 +103,7 @@
               </div>
             </div>
           </div>
-          <div class="border-top">  
+          <div class="border-top">
             <h4 class="ticket-name">【当日票】故宫成人票</h4>
             <span class="ticket-qunarprice">
               ¥
@@ -143,7 +143,7 @@ export default {
   background-color: #f5f5f5;
   li {
     background-color: #ffffff;
-        margin-bottom: .2rem;
+    margin-bottom: 0.2rem;
     .tl-search {
       overflow: hidden;
       padding: 0.2rem 0.22rem;
