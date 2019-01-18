@@ -2,16 +2,19 @@
   <div>
     <forbiddenHeader/>
     <forbiddenBanner/>
+    <forbiddenList/>
   </div>
 </template>
 <script>
 import forbiddenHeader from "./components/Header";
 import forbiddenBanner from "./components/Banner";
+import forbiddenList from "./components/List";
 export default {
-  name: "MuseumCity",
+  name: "forbiddenCity",
   components: {
     forbiddenHeader,
-    forbiddenBanner
+    forbiddenBanner,
+    forbiddenList
   }
 };
 </script>
