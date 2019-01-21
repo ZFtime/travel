@@ -362,6 +362,7 @@ export default {
             }
             .lure {
               position: absolute;
+              margin: 0px 5px;
               left: 0;
               bottom: 0;
               width: 100%;
