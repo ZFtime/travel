@@ -22,7 +22,7 @@
     <swiper :options="swiperOption">
       <swiper-slide v-for="(page,index) in pages" :key="index">
         <div class="icon" v-for="item in page" :key="item.id">
-          <router-link :to="'/list_'+item.desc">
+          <router-link :to="{ path:'/list_'+item.desc, query: { plan: item.desc}}">
             <div class="icon-img">
               <img class="icon-img-content" :src="item.imgUrl" :alt="item.desc">
             </div>
