@@ -5,6 +5,7 @@ import City from "./views/city/City.vue";
 import Detail from "./views/detail/Detail.vue";
 import Ticket from "./views/iconList/ticket/ticket.vue"
 import forbiddenCity from "./views/iconList/forbiddenCity/forbiddenCity.vue"
+import OneTour from "./views/iconList/OneTour/OneTour.vue"
 
 Vue.use(Router);
 
@@ -33,6 +34,11 @@ export default new Router({
       path: "/list_故宫",
       name: "list_故宫",
       component: forbiddenCity
+    },
+    {
+      path: "/list_一日游",
+      name: "list_一日游",
+      component: OneTour
     }
   ],
   scrollBehavior(to, from, savedPosition) {

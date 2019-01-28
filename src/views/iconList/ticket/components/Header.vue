@@ -6,7 +6,7 @@
       </div>
     </router-link>
     <div class="header-input">
-      <input type="text" placeholder="输入城市或景点" value="景点门票">
+      <input type="text" placeholder="输入城市或景点" :value="iconDesc">
     </div>
     <router-link to="/city">
       <div class="header-right">
@@ -20,12 +20,17 @@
 // import { mapState, mapGetters } from "vuex";
 export default {
   name: "ticketHeader",
+  data() {
+    return {
+      iconDesc: ""
+    };
+  },
   mounted() {
     this.receiveData();
   },
   methods: {
     receiveData() {
-      console.log(this.$route.params.path);
+      this.iconDesc = this.$route.name.split("_")[1];
     }
   }
 };
