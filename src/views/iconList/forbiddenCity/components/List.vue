@@ -12,101 +12,18 @@
           </div>
           <div class="list-detail">
             <ul>
-              <li class="list-item">
+              <li class="list-item" v-for="(item,index)  in HereList" :key="index">
                 <div class="item-img">
-                  <img
-                    src="https://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_220x200_0888af6d.jpg"
-                    alt
-                  >
-                  <span class="name">故宫</span>
+                  <img :src="item.bannenImg" :alt="item.sighttInfoTitle">
+                  <span class="name">{{item.sighttName}}</span>
                 </div>
                 <div class="info">
-                  <h4 class="info-name">【当日票】故宫成人票凭身份证入园（随买随用，快速入园）</h4>
-                  <p class="info-detail">东方宫殿建筑代表，世界宫殿建筑典范</p>
+                  <h4 class="info-name">{{item.sighttInfoTitle}}</h4>
+                  <p class="info-detail">{{item.sightInfoDetail}}</p>
                   <div class="info-bottom">
                     <div class="lure">
                       <span class="price">¥</span>
-                      <em class="price-num">40</em>
-                    </div>
-                    <span class="info-btn">立即抢购</span>
-                  </div>
-                </div>
-              </li>
-              <li class="list-item">
-                <div class="item-img">
-                  <img
-                    src="https://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_220x200_0888af6d.jpg"
-                    alt
-                  >
-                  <span class="name">故宫</span>
-                </div>
-                <div class="info">
-                  <h4 class="info-name">【当日票】故宫成人票凭身份证入园（随买随用，快速入园）</h4>
-                  <p class="info-detail">东方宫殿建筑代表，世界宫殿建筑典范</p>
-                  <div class="info-bottom">
-                    <div class="lure">
-                      <span class="price">¥</span>
-                      <em class="price-num">40</em>
-                    </div>
-                    <span class="info-btn">立即抢购</span>
-                  </div>
-                </div>
-              </li>
-              <li class="list-item">
-                <div class="item-img">
-                  <img
-                    src="https://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_220x200_0888af6d.jpg"
-                    alt
-                  >
-                  <span class="name">故宫</span>
-                </div>
-                <div class="info">
-                  <h4 class="info-name">【当日票】故宫成人票凭身份证入园（随买随用，快速入园）</h4>
-                  <p class="info-detail">东方宫殿建筑代表，世界宫殿建筑典范</p>
-                  <div class="info-bottom">
-                    <div class="lure">
-                      <span class="price">¥</span>
-                      <em class="price-num">40</em>
-                    </div>
-                    <span class="info-btn">立即抢购</span>
-                  </div>
-                </div>
-              </li>
-              <li class="list-item">
-                <div class="item-img">
-                  <img
-                    src="https://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_220x200_0888af6d.jpg"
-                    alt
-                  >
-                  <span class="name">故宫</span>
-                </div>
-                <div class="info">
-                  <h4 class="info-name">【当日票】故宫成人票凭身份证入园（随买随用，快速入园）</h4>
-                  <p class="info-detail">东方宫殿建筑代表，世界宫殿建筑典范</p>
-                  <div class="info-bottom">
-                    <div class="lure">
-                      <span class="price">¥</span>
-                      <em class="price-num">40</em>
-                    </div>
-                    <span class="info-btn">立即抢购</span>
-                  </div>
-                </div>
-              </li>
-              <li class="list-item">
-                <div class="item-img">
-                  <img
-                    src="https://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_220x200_0888af6d.jpg"
-                    alt
-                  >
-                  <span class="name">故宫</span>
-                </div>
-                <div class="info">
-                  <h4 class="info-name">【当日票】故宫成人票凭身份证入园（随买随用，快速入园）</h4>
-                  <p class="info-detail">东方宫殿建筑代表，世界宫殿建筑典范</p>
-                  <div class="info-bottom">
-                    <div class="lure">
-                      <span class="price">¥</span>
-                      <em class="price-num">40</em>
+                      <em class="price-num">{{item.InfoPrice}}</em>
                     </div>
                     <span class="info-btn">立即抢购</span>
                   </div>
@@ -124,6 +41,57 @@
 import forbiddenHot from "../Hot/Hot";
 export default {
   name: "forbiddenList",
+  data() {
+    return {
+      HereList: [
+        {
+          sighttName: "故宫",
+          sighttInfoTitle:
+            "【当日票】故宫成人票凭身份证入园（随买随用，快速入园）",
+          sightInfoDetail: "东方宫殿建筑代表，世界宫殿建筑典范",
+          InfoPrice: "40",
+          bannenImg:
+            "https://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_220x200_0888af6d.jpg"
+        },
+        {
+          sighttName: "故宫",
+          sighttInfoTitle:
+            "【当日票】故宫成人票凭身份证入园（随买随用，快速入园）",
+          sightInfoDetail: "东方宫殿建筑代表，世界宫殿建筑典范",
+          InfoPrice: "40",
+          bannenImg:
+            "https://img1.qunarzz.com/piao/fusion/1605/fc/e31ec51c58632ff7.jpg_220x200_7dba91a5.jpg"
+        },
+        {
+          sighttName: "故宫",
+          sighttInfoTitle:
+            "【当日票】故宫成人票凭身份证入园（随买随用，快速入园）",
+          sightInfoDetail: "东方宫殿建筑代表，世界宫殿建筑典范",
+          InfoPrice: "40",
+          bannenImg:
+            "https://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_220x200_0888af6d.jpg"
+        },
+        {
+          sighttName: "故宫讲解",
+          sighttInfoTitle:
+            "【当日票】故宫成人票凭身份证入园（随买随用，快速入园）",
+          sightInfoDetail: "东方宫殿建筑代表，世界宫殿建筑典范",
+          InfoPrice: "40",
+          bannenImg:
+            "https://img1.qunarzz.com/piao/fusion/1707/93/e46fb508820f3d02.jpg_220x200_063ce9a0.jpg"
+        },
+        {
+          sighttName: "故宫",
+          sighttInfoTitle:
+            "【当日票】故宫成人票凭身份证入园（随买随用，快速入园）",
+          sightInfoDetail: "东方宫殿建筑代表，世界宫殿建筑典范",
+          InfoPrice: "40",
+          bannenImg:
+            "https://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_220x200_0888af6d.jpg"
+        }
+      ]
+    };
+  },
   components: {
     forbiddenHot
   }
