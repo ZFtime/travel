@@ -182,6 +182,11 @@ export default {
   },
   methods: {
     showMask(i) {
+      if (this.show == i) {
+        this.show = -1;
+        this.seen = -1;
+        return;
+      }
       this.show = i;
       this.seen = i;
     },
