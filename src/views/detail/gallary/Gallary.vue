@@ -3,12 +3,12 @@
     <div class="wrapper">
       <swiper :options="swiperOption">
         <swiper-slide v-for="(item,index) in imgs" :key="index">
-          <div>
+          <div class="active">
             <img class="gallary-image" :src="item">
           </div>
         </swiper-slide>
-        <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
+      <div class="swiper-pagination" slot="pagination"></div>
     </div>
   </div>
 </template>
@@ -63,9 +63,8 @@ export default {
       width: 100%;
     }
     .swiper-pagination {
-      z-index: 199;
+      z-index: 100000;
       color: #fff;
-      bottom: -0.1rem;
     }
   }
 }
