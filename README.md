@@ -15,6 +15,8 @@ vue2 + vue-cli3 + vuex + vue-router + webpack + ES6/7+less+flex
 
 git clone https://github.com/ZFtime/travel.git
 
+
+
 npm i 
 
 mpm run server
