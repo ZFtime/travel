@@ -8,9 +8,11 @@
 
 travel 是基于 vue-cli3+swiper+axios+vuex 为主要技术，开发的一个去哪儿网
 
-## 项目目录展示
+## 组件的列表
 
 ![image](https://github.com/ZFtime/travel/blob/master/src/assets/img/componets.png)
+
+## 项目的部分页面的展示
 
 ## 运行项目
 
