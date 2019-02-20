@@ -10,9 +10,17 @@ travel 是基于 vue-cli3+swiper+axios+vuex 为主要技术，开发的一个去
 
 ## 组件的列表
 
-![image](https://github.com/ZFtime/travel/blob/master/src/assets/img/componets.png)
+![componets](https://github.com/ZFtime/travel/blob/master/src/assets/img/componets.png)
 
 ## 项目的部分页面的展示
+
+![home](https://github.com/ZFtime/travel/blob/master/src/assets/img/home.gif)
+![city](https://github.com/ZFtime/travel/blob/master/src/assets/img/city.gif)
+![detail](https://github.com/ZFtime/travel/blob/master/src/assets/img/detail.png)
+![Imperial-detail](https://github.com/ZFtime/travel/blob/master/src/assets/img/Imperial%20-detail.png)
+![picture](https://github.com/ZFtime/travel/blob/master/src/assets/img/picture.gif)
+![tour-detail](https://github.com/ZFtime/travel/blob/master/src/assets/img/tour-detail.png)
+![view-detail](https://github.com/ZFtime/travel/blob/master/src/assets/img/view-detail.png)
 
 ## 运行项目
 
