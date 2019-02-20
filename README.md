@@ -8,20 +8,6 @@
 
 travel 是基于 vue-cli3+swiper+axios+vuex 为主要技术，开发的一个去哪儿网
 
-## 组件的列表
-
-![componets](https://github.com/ZFtime/travel/blob/master/src/assets/img/componets.png)
-
-## 项目的部分页面的展示
-
-![home](https://github.com/ZFtime/travel/blob/master/src/assets/img/home.gif)
-![city](https://github.com/ZFtime/travel/blob/master/src/assets/img/city.gif)
-![detail](https://github.com/ZFtime/travel/blob/master/src/assets/img/detail.png)
-![Imperial-detail](https://github.com/ZFtime/travel/blob/master/src/assets/img/Imperial%20-detail.png)
-![picture](https://github.com/ZFtime/travel/blob/master/src/assets/img/picture.gif)
-![tour-detail](https://github.com/ZFtime/travel/blob/master/src/assets/img/tour-detail.png)
-![view-detail](https://github.com/ZFtime/travel/blob/master/src/assets/img/view-detail.png)
-
 ## 运行项目
 
 ```
@@ -38,7 +24,7 @@ npm run serve
 
 ```
 
-## 运行后台数据
+## 运行后台数据的命令
 
 ```
 一定要在个 ">static>mock" 文件夹下面的cmd
@@ -48,3 +34,17 @@ npm run serve
 注意：以上的三个命令，每个都开一个新的cmd黑窗口，想要看项目就要这样做，项目运行的时候，黑窗口"请勿关闭"(如果观看的你有什么好的办法，可以提供一下，以上这种方法仅供参考)
 
 ```
+
+## 组件的列表
+
+![componets](https://github.com/ZFtime/travel/blob/master/src/assets/img/componets.png)
+
+## 项目的部分页面的展示
+
+![home](https://github.com/ZFtime/travel/blob/master/src/assets/img/home.gif)
+![city](https://github.com/ZFtime/travel/blob/master/src/assets/img/city.gif)
+![detail](https://github.com/ZFtime/travel/blob/master/src/assets/img/detail.png)
+![Imperial-detail](https://github.com/ZFtime/travel/blob/master/src/assets/img/Imperial%20-detail.png)
+![picture](https://github.com/ZFtime/travel/blob/master/src/assets/img/picture.gif)
+![tour-detail](https://github.com/ZFtime/travel/blob/master/src/assets/img/tour-detail.png)
+![view-detail](https://github.com/ZFtime/travel/blob/master/src/assets/img/view-detail.png)
