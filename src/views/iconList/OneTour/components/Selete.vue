@@ -24,7 +24,8 @@
               class="menu-item"
               v-for="(item,index) in sortAll"
               :key="index"
-              @click="showList(index)"
+              @click="showAllSort(index)"
+              :class="{active:allSort==index}"
             >
               <img class="menu-item-icon" :src="item.imgUrl">
               <span>{{item.name}}</span>
@@ -34,14 +35,14 @@
         </div>
         <div class="menu-right">
           <ul>
-            <li v-if="index==1">
+            <li v-if="allSort==1">
               <ul>
                 <li class="menu-item">一日游</li>
                 <li class="menu-item">周边游</li>
                 <li class="menu-item">当地游</li>
               </ul>
             </li>
-            <li v-if="index==2">
+            <li v-if="allSort==2">
               <ul>
                 <li class="menu-item">全部农家度假</li>
                 <li class="menu-item">采摘</li>
@@ -51,7 +52,7 @@
                 <li class="menu-item">生态园</li>
               </ul>
             </li>
-            <li v-if="index==3">
+            <li v-if="allSort==3">
               <ul>
                 <li class="menu-item">全部游乐场</li>
                 <li class="menu-item">儿童乐园</li>
@@ -61,7 +62,7 @@
                 <li class="menu-item">迪士尼</li>
               </ul>
             </li>
-            <li v-if="index==4">
+            <li v-if="allSort==4">
               <ul>
                 <li class="menu-item">全部自然风光</li>
                 <li class="menu-item">山川</li>
@@ -71,7 +72,7 @@
                 <li class="menu-item">瀑布</li>
               </ul>
             </li>
-            <li v-if="index==5">
+            <li v-if="allSort==5">
               <ul>
                 <li class="menu-item">全部展馆</li>
                 <li class="menu-item">博物馆</li>
@@ -95,6 +96,7 @@
               v-for="(item,index) in desAll"
               :key="index"
               @click="showList(index)"
+              :class="{active:listIndex==index}"
             >
               <span>{{item}}</span>
             </li>
@@ -112,6 +114,7 @@
               v-for="(item,index) in recAll"
               :key="index"
               @click="showList(index)"
+              :class="{active:listIndex==index}"
             >
               <span>{{item}}</span>
             </li>
@@ -127,10 +130,12 @@ export default {
   data() {
     return {
       show: -1,
-      index: 0,
+      listIndex: 0,
+      allSort: 0,
       close: false,
       seen: -1,
       caption: ["全部分类", "全部目的地", "推荐票排序"],
+      // 模拟全部分类的数据
       sortAll: [
         {
           imgUrl:
@@ -169,7 +174,9 @@ export default {
           number: "3"
         }
       ],
+      // 模拟全部目的地的数据
       desAll: ["全部目的地", "北京", "天津", "张家口", "承德", "忻州"],
+      // 模拟推荐票排序的数据
       recAll: [
         "推荐排序",
         "销量最高",
@@ -190,8 +197,16 @@ export default {
       this.show = i;
       this.seen = i;
     },
+    // 全部分类
+    showAllSort(i) {
+      this.allSort = i;
+    },
+    //全部目的地，推荐票排序
     showList(i) {
-      this.index = i;
+      this.listIndex = i;
+      // if (this.listIndex == i) {
+      this.show = -1;
+      // }
     }
   }
 };
