@@ -1,0 +1,117 @@
+{
+    "msg": {
+        "ret": "true",
+        "status": "200",
+        "statusText": "OK",
+        "data": {
+            "recommendList": [{
+                    "id": "0001",
+                    "imgUrl": "http://img1.qunarzz.com/sight/p0/1712/95/95f38f28a6ff19cba3.img.jpg_200x200_af967e35.jpg",
+                    "itemTitle": "水奥雪世界",
+                    "itemDesc": "北京市顺义区奥林匹克水上公园",
+                    "itemButton": "查看详情"
+                },
+                {
+                    "id": "0002",
+                    "imgUrl": "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_200x200_1bc99086.jpg",
+                    "itemTitle": "故宫",
+                    "itemDesc": "北京市东城区景山前街4号",
+                    "itemButton": "查看详情"
+                },
+                {
+                    "id": "0003",
+                    "imgUrl": "http://img1.qunarzz.com/sight/p0/1511/d2/d2aec2dfc5aa771290.water.jpg_200x200_69e4a80d.jpg",
+                    "itemTitle": "南山滑雪场",
+                    "itemDesc": "北京市密云县河南寨镇圣水头村",
+                    "itemButton": "查看详情"
+                }
+            ],
+            "iconList": [{
+                    "id": "0001",
+                    "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+                    "desc": "景点门票"
+                },
+                {
+                    "id": "0002",
+                    "imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png",
+                    "desc": "一日游"
+                },
+                {
+                    "id": "0003",
+                    "imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
+                    "desc": "北京必游"
+                },
+                {
+                    "id": "0004",
+                    "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png",
+                    "desc": "帝都范儿"
+                },
+                {
+                    " id": "0005",
+                    "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
+                    "desc": "动植物园"
+                },
+                {
+                    "id": "0006",
+                    "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/6c/9e54a8540fee0102.png",
+                    "desc": "故宫"
+                },
+                {
+                    "id": "0007",
+                    "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png",
+                    "desc": "名胜古迹"
+                },
+                {
+                    "id": "0008",
+                    "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/fc/b10a6b2e4f0fe102.png",
+                    "desc": "北京滑雪"
+                },
+                {
+                    " id": "0009",
+                    "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/ab/6f7d6e44963c9302.png",
+                    "desc": "泡温泉"
+                },
+                {
+                    "id": "0010",
+                    "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/b2/bfbc5d66e0ab5a02.png",
+                    "desc": "冰雪大世界"
+                }
+            ],
+            "WeekendList": [{
+                    "id": "0001",
+                    "imgUrl": "http://img1.qunarzz.com/sight/source/1811/f3/86173f863bef61.jpg_r_640x214_52b003ac.jpg",
+                    "itemTitle": "京城周末撒欢",
+                    "itemDesc": "在帝都过周末，不仅仅是城中游！"
+                },
+                {
+                    "id": "0002",
+                    "imgUrl": "http://img1.qunarzz.com/sight/source/1505/9e/21df651e19af5d.jpg_r_640x214_3ea5bb38.jpg",
+                    "itemTitle": "寻找北京的皇城范儿",
+                    "itemDesc": "数百年的宫廷庙宇，至今依旧威严霸气"
+                },
+                {
+                    " id": "0003",
+                    "imgUrl": "http://img1.qunarzz.com/sight/source/1811/7e/476589267ebb41.jpg_r_640x214_bf599709.jpg",
+                    "itemTitle": "京城溜娃必去",
+                    "itemDesc": "德智体美劳全面发展的亲子日，这些地方该去看看…"
+                }
+            ],
+            "SwiperList": [{
+                    "id": "0001",
+                    "imgUrl": "http://img1.qunarzz.com/piao/fusion/1808/70/5603e6a535062402.jpg_750x200_2c552f2c.jpg",
+                    "desc": "最美山水"
+                },
+                {
+                    " id": "0002",
+                    "imgUrl": "http://img1.qunarzz.com/piao/fusion/1901/17/d1821879b04ca602.jpg_750x200_115ccc5d.jpg",
+                    "desc": "冰雪嘉年华"
+                },
+                {
+                    "id": "0003",
+                    "imgUrl": "http://img1.qunarzz.com/piao/fusion/1812/d6/daa880b254940402.jpg_750x200_b114308a.jpg",
+                    "desc": "年终狂欢"
+                }
+            ]
+        }
+    }
+}

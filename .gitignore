@@ -11,7 +11,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 # v-json
-static/mock
+#static/mock
 
 # Editor directories and files
 .idea
