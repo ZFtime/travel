@@ -1,5 +1,4 @@
 # travel
-travel
 
 # 前言
 
@@ -12,7 +11,7 @@ travel 是基于 vue-cli3+swiper+axios+vuex 为主要技术，开发的一个去
 ##项目目录展示
 
 ```
-("./src/assets/img/componets.png")
+![ad](https://github.com/ZFtime/travel.git/src/assets/img/componets.png)
 ```
 
 ## 运行项目
