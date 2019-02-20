@@ -11,7 +11,7 @@ travel 是基于 vue-cli3+swiper+axios+vuex 为主要技术，开发的一个去
 ##项目目录展示
 
 ```
-![ad](https://github.com/ZFtime/travel/blob/master/src/assets/img/componets.png)
+![image](https://github.com/ZFtime/travel/blob/master/src/assets/img/componets.png)
 ```
 
 ## 运行项目
